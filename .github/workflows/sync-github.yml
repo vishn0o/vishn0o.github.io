@@ -1,0 +1,44 @@
+name: Sync GitHub Portfolio Data
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+  push:
+    branches: [ main, master ]
+    paths:
+      - 'scripts/sync-github.mjs'
+      - '.github/workflows/sync-github.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout portfolio repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch latest GitHub data & inject into index.html
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: vishn0o
+        run: node scripts/sync-github.mjs
+
+      - name: Commit and push updated index.html if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          if ! git diff --staged --quiet; then
+            git commit -m "chore(sync): update portfolio specimens from GitHub"
+            git push
+          else
+            echo "No portfolio data changes detected."
+          fi
