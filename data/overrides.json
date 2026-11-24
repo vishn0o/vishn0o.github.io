@@ -1,0 +1,167 @@
+{
+  "profile": {
+    "name": "Vishnu Suresh",
+    "login": "vishn0o",
+    "location": "Manipal / Kerala, IN",
+    "discipline": "Local-first software engineering",
+    "stack": [
+      "Rust",
+      "Kotlin",
+      "JavaScript",
+      "PowerShell"
+    ],
+    "email": "sureshvishnupv@protonmail.com"
+  },
+  "specimens": {
+    "inkynerd": {
+      "formatted_title": "InkyNerd",
+      "type": "Android Widget & Reader",
+      "platform": "ANDROID",
+      "footprint": "ROOM + WORKMANAGER",
+      "artifact_type": "widget-switcher",
+      "readme_summary": "InkyNerd turns niche Wikipedia trivia and nerdy facts into a home-screen widget, a reader and a quiz. The widget comes in three sizes and five visual styles — E-ink, Swiss, Glass, Dot and Almanac — with tap-to-cycle topics and swipe-to-refresh. The reader follows linked articles through a rabbit hole, keeps back/forward history across process death, and stores an offline archive.",
+      "problem_solved": "Interesting facts are usually read once and lost in a feed. InkyNerd gives them a home-screen surface, saves the ones worth keeping, and keeps the archive usable without a connection — using public Wikipedia APIs without keys or an account.",
+      "architecture": "Kotlin and Jetpack Compose (Material 3, Navigation Compose) over a Room database with exported schemas and migration tests, DataStore for widget preferences, and WorkManager for battery-aware periodic refresh. 78 unit tests and 7 instrumented tests.",
+      "key_features": [
+        "Home-screen widget in 3 sizes (4×2, 3×2, 4×3) and 5 visual styles: E-ink, Swiss, Glass, Dot & Almanac",
+        "Rabbit-hole linked article reader with process-death-resilient history and offline cache",
+        "Bookmarks, folders, ranked rounds and daily quizzes backed by the saved Room archive",
+        "Battery-aware periodic WorkManager sync using keyless public MediaWiki APIs"
+      ],
+      "stack": [
+        "Kotlin",
+        "Jetpack Compose",
+        "Room",
+        "DataStore",
+        "WorkManager",
+        "Retrofit",
+        "OkHttp",
+        "kotlinx.serialization"
+      ],
+      "snippet": {
+        "label": "app/src/main/java — MODULE MAP",
+        "lines": [
+          "WikiInkApp.kt         lazy app container",
+          "WikiWidgetProvider    home-screen widget, three sizes",
+          "WidgetCards.kt        E-ink / Swiss / Glass / Dot / Almanac",
+          "ReaderScreen.kt       rabbit-hole reader, history, archive",
+          "WikiRepository.kt     keyless Wikipedia + MediaWiki APIs",
+          "WikiInkDatabase.kt    Room schemas and migrations",
+          "FactSyncWorker.kt     battery-aware periodic refresh",
+          "QuizBuilder.kt        ranked and daily rounds"
+        ]
+      }
+    },
+    "kathashelf": {
+      "formatted_title": "KathaShelf",
+      "type": "Desktop Library Tracker",
+      "platform": "RUST DESKTOP",
+      "footprint": "SINGLE BINARY / SQLITE",
+      "artifact_type": "bilingual-shelf",
+      "readme_summary": "KathaShelf is a desktop book tracker built entirely in Rust with eframe/egui and rusqlite. There is no web server, no Node.js and no cloud account — the library, notes and covers stay on the machine. The interface is called Thalir (തളിർ), with bundled Lora, Inter and Manjari fonts so nothing is downloaded at runtime.",
+      "problem_solved": "Bilingual readers had no offline shelf that treated Malayalam and English titles as equals — and no reason to hand a private library to a cloud service.",
+      "architecture": "One Rust binary. eframe/egui for immediate-mode UI, rusqlite with bundled SQLite for storage, reqwest over rustls for metadata, and background std::threads with mpsc channels so the UI thread never blocks.",
+      "key_features": [
+        "Global search across Google Books, Open Library and Goodreads fallback with cover-first ranking",
+        "VLC-style folder scanning for local EPUB and PDF files with duplicate detection",
+        "Half-star ratings, reading progress, bookmark notes and Markdown reviews with live preview",
+        "Top 10/20/25 charts by genre & language, Surprise-me pick, and reader archetype stats"
+      ],
+      "stack": [
+        "Rust",
+        "egui",
+        "eframe",
+        "rusqlite",
+        "SQLite",
+        "reqwest",
+        "scraper",
+        "rfd"
+      ],
+      "snippet": {
+        "label": "src/ — MODULE MAP",
+        "lines": [
+          "main.rs          entry point, eframe setup, bundled fonts",
+          "app.rs           egui UI, state, modals, mpsc threading",
+          "db.rs            SQLite schema, migrations, CRUD, filters",
+          "covers.rs        download, downscale, local cache",
+          "openlibrary.rs   metadata search, charts, Wikipedia",
+          "scan.rs          EPUB / PDF folder scanner",
+          "reader.rs        archetype, badges, reading stats"
+        ]
+      }
+    },
+    "study-hub": {
+      "formatted_title": "Study Hub",
+      "type": "Offline Spaced-Repetition PWA",
+      "platform": "OFFLINE PWA",
+      "footprint": "0 SERVER / LOCALSTORAGE",
+      "artifact_type": "sm2-demo",
+      "readme_summary": "Study Hub turns a study plan from any AI agent into topics, questions, answers, memory hooks and a live progress and score prediction. Everything runs in the browser: fonts are self-hosted, PDF.js and KaTeX are vendored locally, and the app installs as a PWA.",
+      "problem_solved": "A study plan generated by an AI agent was disposable text — impossible to revise, review or score without pasting it into another online service.",
+      "architecture": "Vanilla JavaScript in the browser. An SM-2 scheduler drives spaced repetition, confidence-weighted marks produce the predicted score, and a pluggable parser accepts line-marker text, JSON or a study-guide PDF.",
+      "key_features": [
+        "Agent prompt generator picks CRASH, STANDARD or DEEP timing from available study hours",
+        "SM-2 spaced repetition with 1 → 3 → 7 → 15 day intervals and 10-minute relearning step",
+        "Confidence-weighted scoring (Fuzzy = 0.5× marks) plus blind-recall KaTeX formula mode",
+        "Exam countdown with daily pace, printable A4 revision sheet, and JSON backup/restore"
+      ],
+      "stack": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "PDF.js",
+        "KaTeX",
+        "Service Workers",
+        "PWA"
+      ],
+      "homepage": "https://vishn0o.github.io/study-hub/",
+      "snippet": {
+        "label": "study_plan.txt — MARKER FORMAT",
+        "lines": [
+          "@@STUDY_TRACKER v1",
+          "@@SUBJECT <subject name>",
+          "@@EXAM <total marks>   @@TARGET <target marks>",
+          "@@TOPIC <topic title>  @@MARKS <marks>",
+          "@@QUESTION <question text>",
+          "@@ANSWER <answer paragraph>",
+          "@@ENDQ",
+          "@@END"
+        ]
+      }
+    },
+    "cat-water-reminder": {
+      "formatted_title": "Cat Water Reminder",
+      "type": "Windows Tray Utility",
+      "platform": "WIN32 TRAY",
+      "footprint": "~13 MB RESIDENT RAM",
+      "artifact_type": "tray-toast",
+      "readme_summary": "A cat lives in the system tray and pops up now and then to tell you to drink water. Made because the author kept forgetting and alarms were annoying. One PowerShell script, no installer, no dependencies, running on any Windows 10 or 11 machine.",
+      "problem_solved": "Hydration alarms were annoying, and keeping a tray app running meant installing something heavy. The constraint was one script, no dependencies, no ceremony.",
+      "architecture": "A single PowerShell script using WinForms for the tray icon and transparent popup, a VBScript launcher for a silent start, and batch helpers for install and uninstall. Quiet hours and fullscreen detection included; idles at ~13 MB.",
+      "key_features": [
+        "Repeating and one-shot reminders, quiet hours at night, and fullscreen game detection",
+        "Click cat to log a glass, right-click to snooze 10 mins, double-click for 1h quiet mode",
+        "Drop-in custom PNGs and WAVs for randomized cat sprites, quips and meows",
+        "45s delayed login autostart, all-time water tally, and zero-admin install.bat"
+      ],
+      "stack": [
+        "PowerShell",
+        "WinForms",
+        "VBScript",
+        "Batchfile"
+      ],
+      "snippet": {
+        "label": "DISTRIBUTION — FILE MANIFEST",
+        "lines": [
+          "cat-reminders.ps1   tray app, reminders, tally",
+          "launch-cat.vbs      silent launcher",
+          "autostart-cat.vbs   45s delayed login start",
+          "install.bat         copy + shortcuts",
+          "uninstall.bat       clean removal",
+          "cat.png / meow.wav  drop-in assets",
+          "cats/ / meows/      random variants"
+        ]
+      }
+    }
+  }
+}

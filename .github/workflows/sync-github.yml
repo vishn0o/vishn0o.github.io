@@ -1,14 +1,13 @@
-name: Sync GitHub Portfolio Data
+name: Sync GitHub Portfolio Specimens
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 */6 * * *'
   workflow_dispatch:
   push:
-    branches: [ main, master ]
     paths:
+      - 'data/overrides.json'
       - 'scripts/sync-github.mjs'
-      - '.github/workflows/sync-github.yml'
 
 permissions:
   contents: write
@@ -17,7 +16,7 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout portfolio repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup Node.js
@@ -25,20 +24,20 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Fetch latest GitHub data & inject into index.html
+      - name: Sync GitHub repos and merge overrides
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_USERNAME: vishn0o
+          GITHUB_USERNAME: ${{ github.repository_owner }}
         run: node scripts/sync-github.mjs
 
-      - name: Commit and push updated index.html if changed
+      - name: Commit updated specimens.json if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html
-          if ! git diff --staged --quiet; then
-            git commit -m "chore(sync): update portfolio specimens from GitHub"
+          git add data/specimens.json index.html
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(sync): update specimen telemetry from GitHub API"
             git push
           else
-            echo "No portfolio data changes detected."
+            echo "No changes to commit."
           fi
