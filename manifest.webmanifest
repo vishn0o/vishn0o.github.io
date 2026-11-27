@@ -1,0 +1,21 @@
+{
+  "name": "Vishnu Suresh (@vishn0o) — Local-First Software Workbench",
+  "short_name": "vishn0o",
+  "description": "Personal software workbench of Vishnu Suresh (@vishn0o). Offline-first tools, desktop apps, and Android utilities.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FBF8F3",
+  "theme_color": "#8F3A1E",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='48' fill='%238F3A1E'/%3E%3Ctext x='96' y='124' text-anchor='middle' font-family='sans-serif' font-size='92' font-weight='bold' fill='%23FFFFFF'%3EV%3C/text%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='128' fill='%238F3A1E'/%3E%3Ctext x='256' y='326' text-anchor='middle' font-family='sans-serif' font-size='240' font-weight='bold' fill='%23FFFFFF'%3EV%3C/text%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}

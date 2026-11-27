@@ -1,256 +1,321 @@
 <!doctype html>
-<html lang="en" data-theme="paper">
+<html lang="en" data-theme="paper" data-palette="terracotta">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#F2F0EA" id="theme-meta" />
-  <meta name="description" content="Vishnu Suresh (@vishn0o) — Local-first software engineering specimen workbench in Rust, Kotlin, JavaScript, and PowerShell." />
-  <title>VISHN0O // SPECIMEN WORKBENCH</title>
+  <meta name="theme-color" content="#FBF8F3" id="theme-meta" />
+  <title>Vishnu Suresh (@vishn0o) — Local-First Software Workbench</title>
+  <meta name="description" content="Personal software workbench of Vishnu Suresh (@vishn0o). Offline-first tools, desktop apps, and Android utilities built with Rust, Kotlin, and JavaScript." />
+  <link rel="canonical" href="https://vishn0o.github.io/" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vishnu Suresh (@vishn0o)" />
+  <meta property="og:title" content="Vishnu Suresh (@vishn0o) — Local-First Software Workbench" />
+  <meta property="og:description" content="Offline-first tools, desktop apps, and Android utilities built with Rust, Kotlin, and JavaScript." />
+  <meta property="og:url" content="https://vishn0o.github.io/" />
+  <meta property="og:image" content="https://vishn0o.github.io/og-preview.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vishnu Suresh (@vishn0o) — Local-First Software Workbench" />
+  <meta name="twitter:description" content="Offline-first tools, desktop apps, and Android utilities built with Rust, Kotlin, and JavaScript." />
+  <meta name="twitter:image" content="https://vishn0o.github.io/og-preview.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600;700&family=Manjari:wght@400;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23121211'/%3E%3Crect x='4' y='4' width='24' height='24' fill='none' stroke='%23D93800' stroke-width='2'/%3E%3Ctext x='16' y='21' text-anchor='middle' font-family='monospace' font-size='14' font-weight='bold' fill='%23F2F0EA'%3EV%3C/text%3E%3C/svg%3E" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400&family=JetBrains+Mono:wght@400..600&family=Manjari:wght@400;700&family=Outfit:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20,500,0,0&icon_names=apps,arrow_upward,close,code,content_copy,dark_mode,data_usage,download,folder_open,light_mode,north_east,offline_bolt,open_in_new,person,pets,search,terminal&display=swap" rel="stylesheet" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='10' fill='%238F3A1E'/%3E%3Ctext x='16' y='21' text-anchor='middle' font-family='sans-serif' font-size='15' font-weight='bold' fill='%23FFFFFF'%3EV%3C/text%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
   <link rel="stylesheet" href="./styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://vishn0o.github.io/#person",
+        "name": "Vishnu Suresh",
+        "alternateName": "vishn0o",
+        "url": "https://vishn0o.github.io/",
+        "sameAs": [
+          "https://github.com/vishn0o",
+          "https://www.linkedin.com/in/vishn0o/"
+        ],
+        "jobTitle": "Software Engineer",
+        "knowsAbout": ["Rust", "Kotlin", "JavaScript", "PowerShell", "Local-First Software", "Android Development"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://vishn0o.github.io/#website",
+        "url": "https://vishn0o.github.io/",
+        "name": "Vishnu Suresh (@vishn0o) — Local-First Software Workbench",
+        "description": "Personal software workbench of Vishnu Suresh (@vishn0o) showcasing offline-first desktop, web, and Android applications.",
+        "author": { "@id": "https://vishn0o.github.io/#person" }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-  <!-- Tactile Analog Paper Grain & Precision Crosshair Reticle -->
-  <div class="paper-grain" aria-hidden="true"></div>
-  <div class="stage-reticle" id="stage-reticle" aria-hidden="true"></div>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <!-- Top Telemetry & Hardware Controls -->
-  <header class="topbar" data-hud-label="TOPBAR // NAV">
-    <div class="topbar-inner">
+  <header class="topbar-wrap">
+    <div class="topbar">
       <a href="#thesis" class="brand-cell" aria-label="Vishnu Suresh Home">
-        <span class="status-dot" aria-hidden="true"></span>
-        <strong>VISHN0O</strong>
-        <span class="muted brand-sub">// SPECIMEN_INDEX</span>
+        <span class="brand-title">vishn0o</span>
+        <span class="brand-sub">Workbench</span>
       </a>
 
       <nav class="top-nav" aria-label="Primary navigation">
-        <a href="#thesis">01. MANIFESTO</a>
-        <a href="#workbench">02. SPECIMENS</a>
-        <a href="#telemetry-foot">03. FOOTPRINT</a>
-        <a href="#signal">04. SIGNAL</a>
+        <a href="#thesis" class="nav-pill">Overview</a>
+        <a href="#workbench" class="nav-pill">Projects</a>
+        <a href="#telemetry-foot" class="nav-pill">Languages</a>
+        <a href="#signal" class="nav-pill">Source</a>
       </nav>
 
       <div class="controls-cell">
-        <span class="coord-readout" id="coord-readout" aria-hidden="true">STAGE:IDLE</span>
-        <button class="sfx-trigger" id="sfx-toggle" type="button" aria-pressed="false" title="Toggle Mechanical Switch Audio Detents (Press M)">
-          <span class="sfx-dot" aria-hidden="true"></span>
-          <span id="sfx-label">SFX:OFF</span>
-        </button>
-        <button class="cmd-trigger" id="cmd-open" type="button" title="Open Command Palette (Press / or Ctrl+K)">
-          <span>CMD</span>
+        <button class="icon-chip" id="cmd-open" type="button" aria-label="Open quick actions" title="Open quick actions (Press / or Ctrl+K)">
+          <span class="material-symbols-rounded" aria-hidden="true">search</span>
+          <span>Search</span>
           <kbd>⌘K</kbd>
         </button>
-        <button class="theme-switch" id="theme-toggle" type="button" aria-label="Toggle E-Ink Paper and Oscilloscope Dark theme">
-          <span class="opt active" data-mode="paper">PAPER</span>
-          <span class="opt" data-mode="dark">DARK</span>
+
+        <div class="palette-picker" role="group" aria-label="Accent color palette">
+          <button type="button" class="palette-dot active" data-palette-btn="terracotta" title="Terracotta" aria-label="Terracotta color theme" aria-pressed="true"></button>
+          <button type="button" class="palette-dot" data-palette-btn="teal" title="Lagoon Teal" aria-label="Lagoon Teal color theme" aria-pressed="false"></button>
+          <button type="button" class="palette-dot" data-palette-btn="indigo" title="Iris Indigo" aria-label="Iris Indigo color theme" aria-pressed="false"></button>
+          <button type="button" class="palette-dot" data-palette-btn="olive" title="Matcha Olive" aria-label="Matcha Olive color theme" aria-pressed="false"></button>
+        </div>
+
+        <button class="theme-switch" id="theme-toggle" type="button" aria-label="Switch between Light and Dark surface mode">
+          <span class="opt active" data-mode="paper">
+            <span class="material-symbols-rounded" aria-hidden="true">light_mode</span>
+            <span>Light</span>
+          </span>
+          <span class="opt" data-mode="dark">
+            <span class="material-symbols-rounded" aria-hidden="true">dark_mode</span>
+            <span>Dark</span>
+          </span>
         </button>
       </div>
     </div>
   </header>
 
-  <main>
-    <!-- ZONE 1: EDITORIAL-TECHNICAL MANIFESTO & DOSSIER -->
-    <section class="hero wrap" id="thesis" aria-labelledby="hero-heading" data-hud-label="01 // MANIFESTO">
-      <div class="hero-topline reveal-stamp">
-        <span class="eyebrow">ISSUE NO. 04 // LOCAL-FIRST SYSTEMS &amp; INTERFACES</span>
-        <span class="live-clock" id="live-clock">MANIPAL · --:-- IST</span>
-      </div>
-
-      <h1 class="hero-title" id="hero-heading" aria-label="Software that lives on your machine and works with the Wi-Fi off.">
-        <span class="line-mask"><span class="line-inner" style="--line-idx:0">Software that lives on</span></span>
-        <span class="line-mask"><span class="line-inner" style="--line-idx:1"><span class="serif-italic">your machine</span> and works</span></span>
-        <span class="line-mask"><span class="line-inner" style="--line-idx:2">with the Wi-Fi off.</span></span>
-      </h1>
-
-      <div class="hero-split reveal-body">
-        <div class="hero-manifesto">
-          <p class="hero-lead">
-            I’m <strong>Vishnu Suresh</strong> (<code>@vishn0o</code>)—a software builder crafting self-contained desktop utilities, offline Android widgets, and browser tools backed by local SQLite, Room, and plain files. No cloud accounts, no subscriptions, no servers to shut down.
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn primary magnetic" href="#workbench">
-              <span>INSPECT SPECIMENS</span>
-              <span class="btn-arrow">↓</span>
-            </a>
-            <a class="btn magnetic" href="https://github.com/vishn0o" target="_blank" rel="noopener">
-              <span>GITHUB (@VISHN0O)</span>
-              <span class="btn-arrow">↗</span>
-            </a>
-            <button class="btn magnetic" id="copy-profile" type="button">COPY PROFILE URL</button>
-          </div>
-
-          <div class="keyboard-legend" id="keyboard-legend" aria-hidden="true">
-            <span><kbd>1</kbd>–<kbd>4</kbd> Switch Specimen</span>
-            <span><kbd>T</kbd> Theme</span>
-            <span><kbd>M</kbd> Mechanical SFX</span>
-            <span><kbd>⌘K</kbd> / <kbd>/</kbd> Palette</span>
-          </div>
+  <main id="main-content">
+    <section class="hero wrap" id="thesis" aria-labelledby="hero-heading">
+      <div class="hero-surface">
+        <div class="hero-topline">
+          <span class="eyebrow-chip">
+            <span class="material-symbols-rounded" aria-hidden="true">offline_bolt</span>
+            <span>Local-First Systems &amp; Interfaces</span>
+          </span>
+          <span class="live-clock" id="live-clock">Manipal · --:-- IST</span>
         </div>
 
-        <aside class="spec-card" aria-label="Operator specification card" data-hud-label="OPERATOR // DOSSIER">
-          <div class="spec-card-head">
-            <span>SPEC_SHEET // REV.2026</span>
-            <span class="badge-live">NET: 0 REQ</span>
+        <h1 class="hero-title" id="hero-heading">
+          Software that lives on <span class="accent-display">your machine</span> and works with the Wi-Fi off.
+        </h1>
+
+        <div class="hero-split">
+          <div>
+            <p class="hero-lead" id="hero-bio">
+              Local-first software engineering
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn primary" href="#workbench">
+                <span class="material-symbols-rounded" aria-hidden="true">apps</span>
+                <span>Explore Projects</span>
+              </a>
+              <a class="btn tonal" id="github-profile-btn" href="https://github.com/vishn0o" target="_blank" rel="noopener noreferrer">
+                <span>GitHub (@vishn0o)</span>
+                <span class="material-symbols-rounded" aria-hidden="true">north_east</span>
+              </a>
+              <a class="btn tonal" id="linkedin-profile-btn" href="https://www.linkedin.com/in/vishn0o/" target="_blank" rel="noopener noreferrer">
+                <span>LinkedIn</span>
+                <span class="material-symbols-rounded" aria-hidden="true">north_east</span>
+              </a>
+              <button class="btn outlined" id="copy-profile" type="button">
+                <span class="material-symbols-rounded" aria-hidden="true">content_copy</span>
+                <span id="copy-profile-label">Copy Profile Link</span>
+              </button>
+            </div>
+
+            <div class="keyboard-legend" id="keyboard-legend" aria-hidden="true">
+              <span><kbd>1</kbd>–<kbd>4</kbd> Switch project</span>
+              <span><kbd>T</kbd> Theme</span>
+              <span><kbd>C</kbd> Color</span>
+              <span><kbd>⌘K</kbd> Quick actions</span>
+            </div>
           </div>
 
-          <div class="spec-identity">
-            <button type="button" class="portrait-box" id="portrait-toggle" aria-label="Toggle portrait E-Ink monochrome or full color" title="Hover or tap to switch E-Ink halftone / full color">
-              <img id="operator-avatar" src="./profile.jpg" data-fallback-src="https://avatars.githubusercontent.com/u/115354932?v=4" width="76" height="76" alt="Vishnu Suresh portrait" />
-            </button>
-            <div>
-              <div class="spec-name" id="operator-name">Vishnu Suresh</div>
-              <div class="spec-sub" id="operator-sub">@vishn0o · Manipal / Kerala, IN</div>
-              <div class="spec-tag">LOCAL-FIRST · ZERO-TELEMETRY</div>
+          <aside class="spec-card" aria-label="Builder profile card">
+            <div class="spec-card-head">
+              <span class="spec-card-kicker">Builder Profile</span>
             </div>
-          </div>
 
-          <dl class="spec-metrics">
-            <div>
-              <dt>SHIPPED TOOLS</dt>
-              <dd id="shipped-count">04</dd>
+            <div class="spec-identity">
+              <button type="button" class="portrait-box" id="portrait-toggle" aria-label="Toggle portrait monochrome or full color" title="Tap to toggle monochrome or full color">
+                <img id="operator-avatar" src="./profile.jpg" data-fallback-src="https://avatars.githubusercontent.com/u/115354932?v=4" width="78" height="78" decoding="async" fetchpriority="high" alt="Vishnu Suresh portrait" />
+              </button>
+              <div>
+                <div class="spec-name" id="operator-name">Vishnu Suresh</div>
+                <div class="spec-sub" id="operator-sub">@vishn0o</div>
+                <div class="spec-tag">Local-First · Zero Telemetry</div>
+              </div>
             </div>
-            <div>
-              <dt>CLOUD SERVERS</dt>
-              <dd>00</dd>
-            </div>
-            <div>
-              <dt>SOURCE FOOTPRINT</dt>
-              <dd id="total-kb">960 KB</dd>
-            </div>
-          </dl>
 
-          <div class="spec-footnote">
-            ENGINES: <code>SQLite</code> · <code>Room</code> · <code>LocalStorage</code> · <code>WinForms</code>
-          </div>
-        </aside>
+            <dl class="spec-metrics">
+              <div class="metric-tile">
+                <dt>Shipped Apps</dt>
+                <dd id="shipped-count">04</dd>
+              </div>
+              <div class="metric-tile">
+                <dt>Total Source</dt>
+                <dd id="total-kb">938 KB</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
       </div>
     </section>
 
-    <!-- ZONE 2: INTERACTIVE SPECIMEN WORKBENCH -->
-    <section class="section wrap" id="workbench" aria-labelledby="workbench-heading" data-hud-label="02 // WORKBENCH">
+    <section class="section wrap" id="workbench" aria-labelledby="workbench-heading">
       <div class="section-header">
         <div>
-          <span class="section-num">02 // INTERACTIVE SPECIMEN DECK</span>
-          <h2 class="section-title" id="workbench-heading">Shipped Systems &amp; <span class="serif-italic">Live Artifacts</span></h2>
+          <span class="section-num">Shipped Software</span>
+          <h2 class="section-title" id="workbench-heading">Systems &amp; <span class="accent-display">Interactive Demos</span></h2>
         </div>
-        <p class="section-hint" id="workbench-hint">Select a specimen or press <kbd id="shortcut-range">1–4</kbd> to inspect its module map and test a live artifact.</p>
+        <p class="section-hint" id="workbench-hint">Select a project or press <kbd id="shortcut-range">1–4</kbd> to inspect modules and test a live demo.</p>
       </div>
 
       <div class="workbench-shell">
-        <div class="specimen-rail" id="specimen-rail" role="tablist" aria-label="Software specimens">
-          <div class="rail-indicator" id="rail-indicator" aria-hidden="true"></div>
-        </div>
-        <article class="specimen-stage" id="specimen-stage" role="tabpanel" aria-live="polite" data-hud-label="SPECIMEN // STAGE"></article>
+        <div class="specimen-rail" id="specimen-rail" role="tablist" aria-label="Software projects"></div>
+        <article class="specimen-stage" id="specimen-stage" role="tabpanel" aria-live="polite">
+          <div class="stage-empty">Loading project modules...</div>
+        </article>
       </div>
     </section>
 
-    <!-- ZONE 3: CODEBASE FOOTPRINT & SIGNAL -->
-    <section class="section wrap" id="telemetry-foot" aria-labelledby="footprint-heading" data-hud-label="03 // FOOTPRINT">
+    <section class="section wrap" id="telemetry-foot" aria-labelledby="footprint-heading">
       <div class="section-header">
         <div>
-          <span class="section-num">03 // REPOSITORY BYTE DISTRIBUTION</span>
-          <h2 class="section-title" id="footprint-heading">Language Footprint Across <span class="serif-italic">All Repos</span></h2>
+          <span class="section-num">Codebase Breakdown</span>
+          <h2 class="section-title" id="footprint-heading">Language Share Across <span class="accent-display">All Repositories</span></h2>
         </div>
-        <span class="section-hint" id="byte-summary">MEASURED IN SOURCE BYTES</span>
+        <span class="section-hint" id="byte-summary">Measured in source bytes</span>
       </div>
 
-      <div class="footprint-box" id="footprint-box">
+      <div class="footprint-box">
         <div class="stacked-bar" id="stacked-bar" role="img" aria-label="Proportional language distribution bar"></div>
-        <div class="footprint-callout" id="footprint-callout">HOVER OR TAP A LANGUAGE SEGMENT TO INSPECT REPOSITORY USAGE</div>
+        <div class="footprint-callout" id="footprint-callout">Hover or tap a language segment to inspect repository usage</div>
         <div class="lang-legend" id="lang-legend"></div>
       </div>
     </section>
 
-    <section class="section wrap signal-section" id="signal" aria-labelledby="signal-heading" data-hud-label="04 // SIGNAL">
+    <section class="section wrap signal-section" id="signal" aria-labelledby="signal-heading">
       <div class="signal-card">
-        <div class="signal-watermark" aria-hidden="true">vishn0o</div>
-        <div class="signal-content">
-          <span class="section-num">04 // OPEN CHANNEL</span>
+        <div>
+          <span class="section-num">Open Source</span>
           <h2 class="signal-title" id="signal-heading">Inspect the source or open an issue.</h2>
           <p class="signal-desc">
-            Every repository is public on GitHub with full source, module layouts, and offline build instructions.
+            Every repository is public on GitHub with full source code, module maps, and offline build instructions.
           </p>
         </div>
         <div class="signal-cta">
-          <a class="btn primary magnetic" href="https://github.com/vishn0o" target="_blank" rel="noopener">
-            <span>GITHUB.COM/VISHN0O</span>
-            <span class="btn-arrow">↗</span>
+          <a class="btn primary" href="https://github.com/vishn0o" target="_blank" rel="noopener noreferrer">
+            <span>github.com/vishn0o</span>
+            <span class="material-symbols-rounded" aria-hidden="true">north_east</span>
           </a>
-          <a class="btn magnetic" href="https://github.com/vishn0o?tab=repositories" target="_blank" rel="noopener">
-            <span>ALL REPOSITORIES</span>
-            <span class="btn-arrow">↗</span>
+          <a class="btn tonal" href="https://github.com/vishn0o?tab=repositories" target="_blank" rel="noopener noreferrer">
+            <span>All Repositories</span>
+            <span class="material-symbols-rounded" aria-hidden="true">folder_open</span>
           </a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Technical Colophon Footer -->
-  <footer class="colophon wrap" id="colophon" data-hud-label="COLOPHON // TELEMETRY">
+  <footer class="colophon wrap" id="colophon">
     <div class="colophon-grid">
       <div class="colophon-cell">
-        <span class="colophon-label">OPERATOR</span>
-        <span>© 2026 VISHNU SURESH (@VISHN0O)</span>
+        <span class="colophon-label">Author</span>
+        <span>© 2026 Vishnu Suresh (@vishn0o)</span>
       </div>
       <div class="colophon-cell">
-        <span class="colophon-label">LAST SYNC</span>
-        <span id="colophon-synced">LOADING TELEMETRY...</span>
+        <span class="colophon-label">Last Synced</span>
+        <span id="colophon-synced">Loading metadata...</span>
       </div>
       <div class="colophon-cell">
-        <span class="colophon-label">BUILD &amp; HEAD</span>
-        <span id="colophon-commit">STATIC // ZERO-DEPENDENCY</span>
+        <span class="colophon-label">Build Snapshot</span>
+        <span id="colophon-commit">Static · Zero Dependencies</span>
       </div>
       <div class="colophon-cell colophon-right">
-        <a href="#thesis">RETURN TO TOP ↑</a>
+        <a href="#thesis" class="back-top-link">
+          <span>Back to top</span>
+          <span class="material-symbols-rounded" aria-hidden="true">arrow_upward</span>
+        </a>
       </div>
     </div>
   </footer>
 
-  <!-- Sticky Bottom Thumb-Dock Navigation (Phones & Tablets <= 1024px) -->
-  <nav class="mobile-dock" id="mobile-dock" aria-label="Section quick jump">
+  <nav class="mobile-dock" id="mobile-dock" aria-label="Section navigation">
     <a href="#thesis" class="dock-link active" data-section="thesis">
-      <span class="dock-num">01</span>
-      <span class="dock-label">THESIS</span>
+      <span class="dock-pill">
+        <span class="material-symbols-rounded" aria-hidden="true">person</span>
+      </span>
+      <span class="dock-label">Overview</span>
     </a>
     <a href="#workbench" class="dock-link" data-section="workbench">
-      <span class="dock-num">02</span>
-      <span class="dock-label">SPECIMENS</span>
+      <span class="dock-pill">
+        <span class="material-symbols-rounded" aria-hidden="true">apps</span>
+      </span>
+      <span class="dock-label">Projects</span>
     </a>
     <a href="#telemetry-foot" class="dock-link" data-section="telemetry-foot">
-      <span class="dock-num">03</span>
-      <span class="dock-label">FOOTPRINT</span>
+      <span class="dock-pill">
+        <span class="material-symbols-rounded" aria-hidden="true">data_usage</span>
+      </span>
+      <span class="dock-label">Languages</span>
     </a>
     <a href="#signal" class="dock-link" data-section="signal">
-      <span class="dock-num">04</span>
-      <span class="dock-label">SIGNAL</span>
+      <span class="dock-pill">
+        <span class="material-symbols-rounded" aria-hidden="true">code</span>
+      </span>
+      <span class="dock-label">Source</span>
     </a>
   </nav>
 
-  <!-- Floating Cat Toast for tray-toast artifact -->
   <div class="cat-toast" id="cat-toast" role="status" aria-live="polite" hidden>
     <div class="cat-toast-head">
-      <span>🐱 cat-reminders.ps1 (~13 MB)</span>
-      <button type="button" id="cat-toast-close" aria-label="Dismiss reminder">✕</button>
+      <span class="cat-toast-title">
+        <span class="material-symbols-rounded" aria-hidden="true">pets</span>
+        <span>cat-reminders.ps1 (~13 MB)</span>
+      </span>
+      <button type="button" id="cat-toast-close" aria-label="Dismiss reminder">
+        <span class="material-symbols-rounded" aria-hidden="true">close</span>
+      </button>
     </div>
     <p id="cat-toast-msg">Meow. Drink a glass of water before your next compile.</p>
     <div class="cat-toast-actions">
-      <button type="button" id="cat-log-glass">+ LOG GLASS (<span id="glass-count">0</span>)</button>
-      <button type="button" id="cat-snooze">SNOOZE 10M</button>
+      <button type="button" id="cat-log-glass">Log Glass (<span id="glass-count">0</span>)</button>
+      <button type="button" id="cat-snooze">Snooze 10m</button>
     </div>
   </div>
 
-  <!-- Command Palette Modal (Cmd/Ctrl+K or /) -->
   <div class="cmd-backdrop" id="cmd-backdrop" hidden>
     <div class="cmd-modal" role="dialog" aria-modal="true" aria-labelledby="cmd-label">
       <div class="cmd-head">
-        <label id="cmd-label" for="cmd-input">&gt; QUICK_COMMAND</label>
-        <button type="button" id="cmd-close" aria-label="Close command palette">ESC</button>
+        <label id="cmd-label" for="cmd-input">
+          <span class="material-symbols-rounded" aria-hidden="true">terminal</span>
+          <span>Quick Actions</span>
+        </label>
+        <button type="button" id="cmd-close" aria-label="Close quick actions">ESC</button>
       </div>
-      <input id="cmd-input" type="text" autocomplete="off" spellcheck="false" placeholder="Jump to specimen, toggle theme/SFX, or copy link..." />
+      <input id="cmd-input" type="text" autocomplete="off" spellcheck="false" placeholder="Jump to a project, switch color/theme, or copy link..." />
       <ul class="cmd-list" id="cmd-list" role="listbox"></ul>
     </div>
   </div>
@@ -259,28 +324,17 @@
 {
   "_source": {
     "account": "https://github.com/vishn0o",
-    "synced_at": "2026-11-23T18:30:00Z",
-    "sync_mode": "GITHUB_ACTIONS // MERGED WITH OVERRIDES.JSON",
-    "head_commit": "9965de8",
-    "note": "Four public repositories. Zero external runtime dependencies or cloud trackers."
+    "synced_at": "2026-11-28T00:15:00Z",
+    "head_commit": "9965de8"
   },
   "profile": {
     "name": "Vishnu Suresh",
     "login": "vishn0o",
     "bio": "Local-first software engineering",
-    "location": "Manipal / Kerala, IN",
     "avatar_url": "./profile.jpg",
     "github_avatar_url": "https://avatars.githubusercontent.com/u/115354932?v=4",
-    "public_repos": 4,
     "html_url": "https://github.com/vishn0o",
-    "member_since": 2022,
-    "discipline": "Local-first software engineering",
-    "stack": [
-      "Rust",
-      "Kotlin",
-      "JavaScript",
-      "PowerShell"
-    ]
+    "blog": "https://www.linkedin.com/in/vishn0o/"
   },
   "featured_projects": [
     {
@@ -289,7 +343,6 @@
       "formatted_title": "InkyNerd",
       "type": "Android Widget & Reader",
       "platform": "ANDROID",
-      "year": "2026",
       "footprint": "ROOM + WORKMANAGER",
       "artifact_type": "widget-switcher",
       "description": "Offline-first Android widget and reader for Wikipedia trivia, with bookmarks and daily quizzes — Kotlin, Compose and Room.",
@@ -302,10 +355,6 @@
         "Bookmarks, folders, ranked rounds and daily quizzes backed by the saved Room archive",
         "Battery-aware periodic WorkManager sync using keyless public MediaWiki APIs"
       ],
-      "languages": [
-        "Kotlin",
-        "Python"
-      ],
       "stack": [
         "Kotlin",
         "Jetpack Compose",
@@ -316,13 +365,13 @@
         "OkHttp",
         "kotlinx.serialization"
       ],
-      "commits": 1,
       "latest_commit_sha": "8f3a1c2",
       "updated_at": "2026-11-20T18:39:20Z",
       "html_url": "https://github.com/vishn0o/InkyNerd",
+      "release_url": "https://github.com/vishn0o/InkyNerd/releases/latest",
       "homepage": null,
       "snippet": {
-        "label": "app/src/main/java — MODULE MAP",
+        "label": "app/src/main/java — Module Map",
         "lines": [
           "WikiInkApp.kt         lazy app container",
           "WikiWidgetProvider    home-screen widget, three sizes",
@@ -341,7 +390,6 @@
       "formatted_title": "KathaShelf",
       "type": "Desktop Library Tracker",
       "platform": "RUST DESKTOP",
-      "year": "2026",
       "footprint": "SINGLE BINARY / SQLITE",
       "artifact_type": "bilingual-shelf",
       "description": "Local-first desktop book tracker for Malayalam & English libraries, built with Rust and egui.",
@@ -354,9 +402,6 @@
         "Half-star ratings, reading progress, bookmark notes and Markdown reviews with live preview",
         "Top 10/20/25 charts by genre & language, Surprise-me pick, and reader archetype stats"
       ],
-      "languages": [
-        "Rust"
-      ],
       "stack": [
         "Rust",
         "egui",
@@ -367,13 +412,12 @@
         "scraper",
         "rfd"
       ],
-      "commits": 3,
       "latest_commit_sha": "4b92e10",
       "updated_at": "2026-11-19T17:20:55Z",
       "html_url": "https://github.com/vishn0o/KathaShelf",
       "homepage": null,
       "snippet": {
-        "label": "src/ — MODULE MAP",
+        "label": "src/ — Module Map",
         "lines": [
           "main.rs          entry point, eframe setup, bundled fonts",
           "app.rs           egui UI, state, modals, mpsc threading",
@@ -391,7 +435,6 @@
       "formatted_title": "Study Hub",
       "type": "Offline Spaced-Repetition PWA",
       "platform": "OFFLINE PWA",
-      "year": "2026",
       "footprint": "0 SERVER / LOCALSTORAGE",
       "artifact_type": "sm2-demo",
       "description": "Offline study tracker — upload a study PDF or marker file from any AI agent and track topics, questions and predicted scores.",
@@ -404,11 +447,6 @@
         "Confidence-weighted scoring (Fuzzy = 0.5× marks) plus blind-recall KaTeX formula mode",
         "Exam countdown with daily pace, printable A4 revision sheet, and JSON backup/restore"
       ],
-      "languages": [
-        "JavaScript",
-        "CSS",
-        "HTML"
-      ],
       "stack": [
         "JavaScript",
         "HTML",
@@ -418,13 +456,12 @@
         "Service Workers",
         "PWA"
       ],
-      "commits": 20,
       "latest_commit_sha": "c19d74a",
       "updated_at": "2026-11-19T03:35:12Z",
       "html_url": "https://github.com/vishn0o/study-hub",
       "homepage": "https://vishn0o.github.io/study-hub/",
       "snippet": {
-        "label": "study_plan.txt — MARKER FORMAT",
+        "label": "study_plan.txt — Marker Format",
         "lines": [
           "@@STUDY_TRACKER v1",
           "@@SUBJECT <subject name>",
@@ -443,7 +480,6 @@
       "formatted_title": "Cat Water Reminder",
       "type": "Windows Tray Utility",
       "platform": "WIN32 TRAY",
-      "year": "2026",
       "footprint": "~13 MB RESIDENT RAM",
       "artifact_type": "tray-toast",
       "description": "Windows tray cat that nags you to hydrate — repeating & one-shot reminders, transparent popup, ~13 MB resident. PowerShell/WinForms, zero dependencies.",
@@ -456,24 +492,18 @@
         "Drop-in custom PNGs and WAVs for randomized cat sprites, quips and meows",
         "45s delayed login autostart, all-time water tally, and zero-admin install.bat"
       ],
-      "languages": [
-        "PowerShell",
-        "Batchfile",
-        "VBScript"
-      ],
       "stack": [
         "PowerShell",
         "WinForms",
         "VBScript",
         "Batchfile"
       ],
-      "commits": 14,
-      "latest_commit_sha": "7e02b5f",
-      "updated_at": "2026-10-19T17:20:19Z",
+      "latest_commit_sha": "latest",
+      "updated_at": "2026-11-27T12:00:00Z",
       "html_url": "https://github.com/vishn0o/cat-water-reminder",
       "homepage": null,
       "snippet": {
-        "label": "DISTRIBUTION — FILE MANIFEST",
+        "label": "Distribution — File Manifest",
         "lines": [
           "cat-reminders.ps1   tray app, reminders, tally",
           "launch-cat.vbs      silent launcher",
@@ -488,75 +518,20 @@
   ],
   "tech_matrix": {
     "languages": [
-      {
-        "name": "Kotlin",
-        "bytes": 402083,
-        "used_in": [
-          "inkynerd"
-        ]
-      },
-      {
-        "name": "Rust",
-        "bytes": 292244,
-        "used_in": [
-          "kathashelf"
-        ]
-      },
-      {
-        "name": "JavaScript",
-        "bytes": 149977,
-        "used_in": [
-          "study-hub"
-        ]
-      },
-      {
-        "name": "PowerShell",
-        "bytes": 47127,
-        "used_in": [
-          "cat-water-reminder"
-        ]
-      },
-      {
-        "name": "CSS",
-        "bytes": 46500,
-        "used_in": [
-          "study-hub"
-        ]
-      },
-      {
-        "name": "Python",
-        "bytes": 12546,
-        "used_in": [
-          "inkynerd"
-        ]
-      },
-      {
-        "name": "HTML",
-        "bytes": 7172,
-        "used_in": [
-          "study-hub"
-        ]
-      },
-      {
-        "name": "Batchfile",
-        "bytes": 2114,
-        "used_in": [
-          "cat-water-reminder"
-        ]
-      },
-      {
-        "name": "VBScript",
-        "bytes": 785,
-        "used_in": [
-          "cat-water-reminder"
-        ]
-      }
+      { "name": "Kotlin", "bytes": 402083, "used_in": ["inkynerd"] },
+      { "name": "Rust", "bytes": 292244, "used_in": ["kathashelf"] },
+      { "name": "JavaScript", "bytes": 149977, "used_in": ["study-hub"] },
+      { "name": "PowerShell", "bytes": 47127, "used_in": ["cat-water-reminder"] },
+      { "name": "CSS", "bytes": 46500, "used_in": ["study-hub"] },
+      { "name": "Python", "bytes": 12546, "used_in": ["inkynerd"] },
+      { "name": "HTML", "bytes": 7172, "used_in": ["study-hub"] },
+      { "name": "Batchfile", "bytes": 2114, "used_in": ["cat-water-reminder"] },
+      { "name": "VBScript", "bytes": 785, "used_in": ["cat-water-reminder"] }
     ]
   },
   "contact": {
     "email": "sureshvishnupv@protonmail.com",
-    "github": "https://github.com/vishn0o",
-    "repositories": "https://github.com/vishn0o?tab=repositories"
+    "github": "https://github.com/vishn0o"
   }
 }
   </script>
