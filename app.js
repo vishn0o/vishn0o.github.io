@@ -465,7 +465,6 @@
       if (userRes.ok) {
         const ghUser = await userRes.json();
         if (ghUser.name) DATA.profile.name = ghUser.name;
-        if (ghUser.bio) DATA.profile.bio = ghUser.bio;
         if (ghUser.html_url) DATA.profile.html_url = sanitizeUrl(ghUser.html_url, DATA.profile.html_url);
         if (ghUser.avatar_url) DATA.profile.github_avatar_url = sanitizeUrl(ghUser.avatar_url, DATA.profile.github_avatar_url);
       }
