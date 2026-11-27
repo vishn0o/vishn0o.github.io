@@ -1,10 +1,10 @@
 {
   "_source": {
     "account": "https://github.com/vishn0o",
-    "synced_at": "2026-11-23T18:30:00Z",
+    "synced_at": "2026-11-27T20:57:23.901Z",
     "sync_mode": "GITHUB_ACTIONS // MERGED WITH OVERRIDES.JSON",
-    "head_commit": "9965de8",
-    "note": "Four public repositories. Zero external runtime dependencies or cloud trackers."
+    "head_commit": "53285d5",
+    "note": "Automatically synced via GitHub Actions and enriched with data/overrides.json."
   },
   "profile": {
     "name": "Vishnu Suresh",
@@ -22,9 +22,59 @@
       "Kotlin",
       "JavaScript",
       "PowerShell"
-    ]
+    ],
+    "email": "sureshvishnupv@protonmail.com"
   },
   "featured_projects": [
+    {
+      "id": "cat-water-reminder",
+      "name": "cat-water-reminder",
+      "formatted_title": "Cat Water Reminder",
+      "type": "Windows Tray Utility",
+      "platform": "WIN32 TRAY",
+      "year": "2026",
+      "footprint": "~13 MB RESIDENT RAM",
+      "artifact_type": "tray-toast",
+      "description": "A cat in your system tray nudges you to drink water. Windows: one PowerShell script, no dependencies. Linux: Python 3 + GTK 3 on X11. Repeating/one-shot reminders, snooze, quiet hours, water tally.",
+      "readme_summary": "A cat lives in the system tray and pops up now and then to tell you to drink water. Made because the author kept forgetting and alarms were annoying. One PowerShell script, no installer, no dependencies, running on any Windows 10 or 11 machine.",
+      "problem_solved": "Hydration alarms were annoying, and keeping a tray app running meant installing something heavy. The constraint was one script, no dependencies, no ceremony.",
+      "architecture": "A single PowerShell script using WinForms for the tray icon and transparent popup, a VBScript launcher for a silent start, and batch helpers for install and uninstall. Quiet hours and fullscreen detection included; idles at ~13 MB.",
+      "key_features": [
+        "Repeating and one-shot reminders, quiet hours at night, and fullscreen game detection",
+        "Click cat to log a glass, right-click to snooze 10 mins, double-click for 1h quiet mode",
+        "Drop-in custom PNGs and WAVs for randomized cat sprites, quips and meows",
+        "45s delayed login autostart, all-time water tally, and zero-admin install.bat"
+      ],
+      "languages": [
+        "Python",
+        "PowerShell",
+        "Shell",
+        "Batchfile",
+        "VBScript"
+      ],
+      "stack": [
+        "PowerShell",
+        "WinForms",
+        "VBScript",
+        "Batchfile"
+      ],
+      "latest_commit_sha": "db93572",
+      "updated_at": "2026-11-27T16:39:18Z",
+      "html_url": "https://github.com/vishn0o/cat-water-reminder",
+      "homepage": null,
+      "snippet": {
+        "label": "DISTRIBUTION — FILE MANIFEST",
+        "lines": [
+          "cat-reminders.ps1   tray app, reminders, tally",
+          "launch-cat.vbs      silent launcher",
+          "autostart-cat.vbs   45s delayed login start",
+          "install.bat         copy + shortcuts",
+          "uninstall.bat       clean removal",
+          "cat.png / meow.wav  drop-in assets",
+          "cats/ / meows/      random variants"
+        ]
+      }
+    },
     {
       "id": "inkynerd",
       "name": "InkyNerd",
@@ -58,8 +108,7 @@
         "OkHttp",
         "kotlinx.serialization"
       ],
-      "commits": 1,
-      "latest_commit_sha": "8f3a1c2",
+      "latest_commit_sha": "9fe2f41",
       "updated_at": "2026-11-20T18:39:20Z",
       "html_url": "https://github.com/vishn0o/InkyNerd",
       "homepage": null,
@@ -86,7 +135,7 @@
       "year": "2026",
       "footprint": "SINGLE BINARY / SQLITE",
       "artifact_type": "bilingual-shelf",
-      "description": "Local-first desktop book tracker for Malayalam & English libraries, built with Rust and egui.",
+      "description": "Local-first desktop book tracker for Malayalam & English libraries, built with Rust and egui",
       "readme_summary": "KathaShelf is a desktop book tracker built entirely in Rust with eframe/egui and rusqlite. There is no web server, no Node.js and no cloud account — the library, notes and covers stay on the machine. The interface is called Thalir (തളിർ), with bundled Lora, Inter and Manjari fonts so nothing is downloaded at runtime.",
       "problem_solved": "Bilingual readers had no offline shelf that treated Malayalam and English titles as equals — and no reason to hand a private library to a cloud service.",
       "architecture": "One Rust binary. eframe/egui for immediate-mode UI, rusqlite with bundled SQLite for storage, reqwest over rustls for metadata, and background std::threads with mpsc channels so the UI thread never blocks.",
@@ -109,8 +158,7 @@
         "scraper",
         "rfd"
       ],
-      "commits": 3,
-      "latest_commit_sha": "4b92e10",
+      "latest_commit_sha": "1390331",
       "updated_at": "2026-11-19T17:20:55Z",
       "html_url": "https://github.com/vishn0o/KathaShelf",
       "homepage": null,
@@ -136,7 +184,7 @@
       "year": "2026",
       "footprint": "0 SERVER / LOCALSTORAGE",
       "artifact_type": "sm2-demo",
-      "description": "Offline study tracker — upload a study PDF or marker file from any AI agent and track topics, questions and predicted scores.",
+      "description": "Offline study tracker - upload a study PDF from any AI agent and track topics, questions and predicted scores. All local, no server, no accounts.",
       "readme_summary": "Study Hub turns a study plan from any AI agent into topics, questions, answers, memory hooks and a live progress and score prediction. Everything runs in the browser: fonts are self-hosted, PDF.js and KaTeX are vendored locally, and the app installs as a PWA.",
       "problem_solved": "A study plan generated by an AI agent was disposable text — impossible to revise, review or score without pasting it into another online service.",
       "architecture": "Vanilla JavaScript in the browser. An SM-2 scheduler drives spaced repetition, confidence-weighted marks produce the predicted score, and a pluggable parser accepts line-marker text, JSON or a study-guide PDF.",
@@ -160,8 +208,7 @@
         "Service Workers",
         "PWA"
       ],
-      "commits": 20,
-      "latest_commit_sha": "c19d74a",
+      "latest_commit_sha": "b8d692a",
       "updated_at": "2026-11-19T03:35:12Z",
       "html_url": "https://github.com/vishn0o/study-hub",
       "homepage": "https://vishn0o.github.io/study-hub/",
@@ -178,61 +225,13 @@
           "@@END"
         ]
       }
-    },
-    {
-      "id": "cat-water-reminder",
-      "name": "cat-water-reminder",
-      "formatted_title": "Cat Water Reminder",
-      "type": "Windows Tray Utility",
-      "platform": "WIN32 TRAY",
-      "year": "2026",
-      "footprint": "~13 MB RESIDENT RAM",
-      "artifact_type": "tray-toast",
-      "description": "Windows tray cat that nags you to hydrate — repeating & one-shot reminders, transparent popup, ~13 MB resident. PowerShell/WinForms, zero dependencies.",
-      "readme_summary": "A cat lives in the system tray and pops up now and then to tell you to drink water. Made because the author kept forgetting and alarms were annoying. One PowerShell script, no installer, no dependencies, running on any Windows 10 or 11 machine.",
-      "problem_solved": "Hydration alarms were annoying, and keeping a tray app running meant installing something heavy. The constraint was one script, no dependencies, no ceremony.",
-      "architecture": "A single PowerShell script using WinForms for the tray icon and transparent popup, a VBScript launcher for a silent start, and batch helpers for install and uninstall. Quiet hours and fullscreen detection included; idles at ~13 MB.",
-      "key_features": [
-        "Repeating and one-shot reminders, quiet hours at night, and fullscreen game detection",
-        "Click cat to log a glass, right-click to snooze 10 mins, double-click for 1h quiet mode",
-        "Drop-in custom PNGs and WAVs for randomized cat sprites, quips and meows",
-        "45s delayed login autostart, all-time water tally, and zero-admin install.bat"
-      ],
-      "languages": [
-        "PowerShell",
-        "Batchfile",
-        "VBScript"
-      ],
-      "stack": [
-        "PowerShell",
-        "WinForms",
-        "VBScript",
-        "Batchfile"
-      ],
-      "commits": 14,
-      "latest_commit_sha": "7e02b5f",
-      "updated_at": "2026-10-19T17:20:19Z",
-      "html_url": "https://github.com/vishn0o/cat-water-reminder",
-      "homepage": null,
-      "snippet": {
-        "label": "DISTRIBUTION — FILE MANIFEST",
-        "lines": [
-          "cat-reminders.ps1   tray app, reminders, tally",
-          "launch-cat.vbs      silent launcher",
-          "autostart-cat.vbs   45s delayed login start",
-          "install.bat         copy + shortcuts",
-          "uninstall.bat       clean removal",
-          "cat.png / meow.wav  drop-in assets",
-          "cats/ / meows/      random variants"
-        ]
-      }
     }
   ],
   "tech_matrix": {
     "languages": [
       {
         "name": "Kotlin",
-        "bytes": 402083,
+        "bytes": 392849,
         "used_in": [
           "inkynerd"
         ]
@@ -246,9 +245,17 @@
       },
       {
         "name": "JavaScript",
-        "bytes": 149977,
+        "bytes": 150091,
         "used_in": [
           "study-hub"
+        ]
+      },
+      {
+        "name": "Python",
+        "bytes": 72248,
+        "used_in": [
+          "cat-water-reminder",
+          "inkynerd"
         ]
       },
       {
@@ -260,23 +267,23 @@
       },
       {
         "name": "CSS",
-        "bytes": 46500,
+        "bytes": 46109,
         "used_in": [
           "study-hub"
-        ]
-      },
-      {
-        "name": "Python",
-        "bytes": 12546,
-        "used_in": [
-          "inkynerd"
         ]
       },
       {
         "name": "HTML",
-        "bytes": 7172,
+        "bytes": 11713,
         "used_in": [
           "study-hub"
+        ]
+      },
+      {
+        "name": "Shell",
+        "bytes": 5819,
+        "used_in": [
+          "cat-water-reminder"
         ]
       },
       {

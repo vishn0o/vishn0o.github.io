@@ -324,25 +324,87 @@
 {
   "_source": {
     "account": "https://github.com/vishn0o",
-    "synced_at": "2026-11-28T00:15:00Z",
-    "head_commit": "9965de8"
+    "synced_at": "2026-11-27T20:57:23.901Z",
+    "sync_mode": "GITHUB_ACTIONS // MERGED WITH OVERRIDES.JSON",
+    "head_commit": "53285d5",
+    "note": "Automatically synced via GitHub Actions and enriched with data/overrides.json."
   },
   "profile": {
     "name": "Vishnu Suresh",
     "login": "vishn0o",
     "bio": "Local-first software engineering",
+    "location": "Manipal / Kerala, IN",
     "avatar_url": "./profile.jpg",
     "github_avatar_url": "https://avatars.githubusercontent.com/u/115354932?v=4",
+    "public_repos": 4,
     "html_url": "https://github.com/vishn0o",
-    "blog": "https://www.linkedin.com/in/vishn0o/"
+    "member_since": 2022,
+    "discipline": "Local-first software engineering",
+    "stack": [
+      "Rust",
+      "Kotlin",
+      "JavaScript",
+      "PowerShell"
+    ],
+    "email": "sureshvishnupv@protonmail.com"
   },
   "featured_projects": [
+    {
+      "id": "cat-water-reminder",
+      "name": "cat-water-reminder",
+      "formatted_title": "Cat Water Reminder",
+      "type": "Windows Tray Utility",
+      "platform": "WIN32 TRAY",
+      "year": "2026",
+      "footprint": "~13 MB RESIDENT RAM",
+      "artifact_type": "tray-toast",
+      "description": "A cat in your system tray nudges you to drink water. Windows: one PowerShell script, no dependencies. Linux: Python 3 + GTK 3 on X11. Repeating/one-shot reminders, snooze, quiet hours, water tally.",
+      "readme_summary": "A cat lives in the system tray and pops up now and then to tell you to drink water. Made because the author kept forgetting and alarms were annoying. One PowerShell script, no installer, no dependencies, running on any Windows 10 or 11 machine.",
+      "problem_solved": "Hydration alarms were annoying, and keeping a tray app running meant installing something heavy. The constraint was one script, no dependencies, no ceremony.",
+      "architecture": "A single PowerShell script using WinForms for the tray icon and transparent popup, a VBScript launcher for a silent start, and batch helpers for install and uninstall. Quiet hours and fullscreen detection included; idles at ~13 MB.",
+      "key_features": [
+        "Repeating and one-shot reminders, quiet hours at night, and fullscreen game detection",
+        "Click cat to log a glass, right-click to snooze 10 mins, double-click for 1h quiet mode",
+        "Drop-in custom PNGs and WAVs for randomized cat sprites, quips and meows",
+        "45s delayed login autostart, all-time water tally, and zero-admin install.bat"
+      ],
+      "languages": [
+        "Python",
+        "PowerShell",
+        "Shell",
+        "Batchfile",
+        "VBScript"
+      ],
+      "stack": [
+        "PowerShell",
+        "WinForms",
+        "VBScript",
+        "Batchfile"
+      ],
+      "latest_commit_sha": "db93572",
+      "updated_at": "2026-11-27T16:39:18Z",
+      "html_url": "https://github.com/vishn0o/cat-water-reminder",
+      "homepage": null,
+      "snippet": {
+        "label": "DISTRIBUTION — FILE MANIFEST",
+        "lines": [
+          "cat-reminders.ps1   tray app, reminders, tally",
+          "launch-cat.vbs      silent launcher",
+          "autostart-cat.vbs   45s delayed login start",
+          "install.bat         copy + shortcuts",
+          "uninstall.bat       clean removal",
+          "cat.png / meow.wav  drop-in assets",
+          "cats/ / meows/      random variants"
+        ]
+      }
+    },
     {
       "id": "inkynerd",
       "name": "InkyNerd",
       "formatted_title": "InkyNerd",
       "type": "Android Widget & Reader",
       "platform": "ANDROID",
+      "year": "2026",
       "footprint": "ROOM + WORKMANAGER",
       "artifact_type": "widget-switcher",
       "description": "Offline-first Android widget and reader for Wikipedia trivia, with bookmarks and daily quizzes — Kotlin, Compose and Room.",
@@ -355,6 +417,10 @@
         "Bookmarks, folders, ranked rounds and daily quizzes backed by the saved Room archive",
         "Battery-aware periodic WorkManager sync using keyless public MediaWiki APIs"
       ],
+      "languages": [
+        "Kotlin",
+        "Python"
+      ],
       "stack": [
         "Kotlin",
         "Jetpack Compose",
@@ -365,13 +431,12 @@
         "OkHttp",
         "kotlinx.serialization"
       ],
-      "latest_commit_sha": "8f3a1c2",
+      "latest_commit_sha": "9fe2f41",
       "updated_at": "2026-11-20T18:39:20Z",
       "html_url": "https://github.com/vishn0o/InkyNerd",
-      "release_url": "https://github.com/vishn0o/InkyNerd/releases/latest",
       "homepage": null,
       "snippet": {
-        "label": "app/src/main/java — Module Map",
+        "label": "app/src/main/java — MODULE MAP",
         "lines": [
           "WikiInkApp.kt         lazy app container",
           "WikiWidgetProvider    home-screen widget, three sizes",
@@ -390,9 +455,10 @@
       "formatted_title": "KathaShelf",
       "type": "Desktop Library Tracker",
       "platform": "RUST DESKTOP",
+      "year": "2026",
       "footprint": "SINGLE BINARY / SQLITE",
       "artifact_type": "bilingual-shelf",
-      "description": "Local-first desktop book tracker for Malayalam & English libraries, built with Rust and egui.",
+      "description": "Local-first desktop book tracker for Malayalam & English libraries, built with Rust and egui",
       "readme_summary": "KathaShelf is a desktop book tracker built entirely in Rust with eframe/egui and rusqlite. There is no web server, no Node.js and no cloud account — the library, notes and covers stay on the machine. The interface is called Thalir (തളിർ), with bundled Lora, Inter and Manjari fonts so nothing is downloaded at runtime.",
       "problem_solved": "Bilingual readers had no offline shelf that treated Malayalam and English titles as equals — and no reason to hand a private library to a cloud service.",
       "architecture": "One Rust binary. eframe/egui for immediate-mode UI, rusqlite with bundled SQLite for storage, reqwest over rustls for metadata, and background std::threads with mpsc channels so the UI thread never blocks.",
@@ -401,6 +467,9 @@
         "VLC-style folder scanning for local EPUB and PDF files with duplicate detection",
         "Half-star ratings, reading progress, bookmark notes and Markdown reviews with live preview",
         "Top 10/20/25 charts by genre & language, Surprise-me pick, and reader archetype stats"
+      ],
+      "languages": [
+        "Rust"
       ],
       "stack": [
         "Rust",
@@ -412,12 +481,12 @@
         "scraper",
         "rfd"
       ],
-      "latest_commit_sha": "4b92e10",
+      "latest_commit_sha": "1390331",
       "updated_at": "2026-11-19T17:20:55Z",
       "html_url": "https://github.com/vishn0o/KathaShelf",
       "homepage": null,
       "snippet": {
-        "label": "src/ — Module Map",
+        "label": "src/ — MODULE MAP",
         "lines": [
           "main.rs          entry point, eframe setup, bundled fonts",
           "app.rs           egui UI, state, modals, mpsc threading",
@@ -435,9 +504,10 @@
       "formatted_title": "Study Hub",
       "type": "Offline Spaced-Repetition PWA",
       "platform": "OFFLINE PWA",
+      "year": "2026",
       "footprint": "0 SERVER / LOCALSTORAGE",
       "artifact_type": "sm2-demo",
-      "description": "Offline study tracker — upload a study PDF or marker file from any AI agent and track topics, questions and predicted scores.",
+      "description": "Offline study tracker - upload a study PDF from any AI agent and track topics, questions and predicted scores. All local, no server, no accounts.",
       "readme_summary": "Study Hub turns a study plan from any AI agent into topics, questions, answers, memory hooks and a live progress and score prediction. Everything runs in the browser: fonts are self-hosted, PDF.js and KaTeX are vendored locally, and the app installs as a PWA.",
       "problem_solved": "A study plan generated by an AI agent was disposable text — impossible to revise, review or score without pasting it into another online service.",
       "architecture": "Vanilla JavaScript in the browser. An SM-2 scheduler drives spaced repetition, confidence-weighted marks produce the predicted score, and a pluggable parser accepts line-marker text, JSON or a study-guide PDF.",
@@ -446,6 +516,11 @@
         "SM-2 spaced repetition with 1 → 3 → 7 → 15 day intervals and 10-minute relearning step",
         "Confidence-weighted scoring (Fuzzy = 0.5× marks) plus blind-recall KaTeX formula mode",
         "Exam countdown with daily pace, printable A4 revision sheet, and JSON backup/restore"
+      ],
+      "languages": [
+        "JavaScript",
+        "CSS",
+        "HTML"
       ],
       "stack": [
         "JavaScript",
@@ -456,12 +531,12 @@
         "Service Workers",
         "PWA"
       ],
-      "latest_commit_sha": "c19d74a",
+      "latest_commit_sha": "b8d692a",
       "updated_at": "2026-11-19T03:35:12Z",
       "html_url": "https://github.com/vishn0o/study-hub",
       "homepage": "https://vishn0o.github.io/study-hub/",
       "snippet": {
-        "label": "study_plan.txt — Marker Format",
+        "label": "study_plan.txt — MARKER FORMAT",
         "lines": [
           "@@STUDY_TRACKER v1",
           "@@SUBJECT <subject name>",
@@ -473,65 +548,87 @@
           "@@END"
         ]
       }
-    },
-    {
-      "id": "cat-water-reminder",
-      "name": "cat-water-reminder",
-      "formatted_title": "Cat Water Reminder",
-      "type": "Windows Tray Utility",
-      "platform": "WIN32 TRAY",
-      "footprint": "~13 MB RESIDENT RAM",
-      "artifact_type": "tray-toast",
-      "description": "Windows tray cat that nags you to hydrate — repeating & one-shot reminders, transparent popup, ~13 MB resident. PowerShell/WinForms, zero dependencies.",
-      "readme_summary": "A cat lives in the system tray and pops up now and then to tell you to drink water. Made because the author kept forgetting and alarms were annoying. One PowerShell script, no installer, no dependencies, running on any Windows 10 or 11 machine.",
-      "problem_solved": "Hydration alarms were annoying, and keeping a tray app running meant installing something heavy. The constraint was one script, no dependencies, no ceremony.",
-      "architecture": "A single PowerShell script using WinForms for the tray icon and transparent popup, a VBScript launcher for a silent start, and batch helpers for install and uninstall. Quiet hours and fullscreen detection included; idles at ~13 MB.",
-      "key_features": [
-        "Repeating and one-shot reminders, quiet hours at night, and fullscreen game detection",
-        "Click cat to log a glass, right-click to snooze 10 mins, double-click for 1h quiet mode",
-        "Drop-in custom PNGs and WAVs for randomized cat sprites, quips and meows",
-        "45s delayed login autostart, all-time water tally, and zero-admin install.bat"
-      ],
-      "stack": [
-        "PowerShell",
-        "WinForms",
-        "VBScript",
-        "Batchfile"
-      ],
-      "latest_commit_sha": "latest",
-      "updated_at": "2026-11-27T12:00:00Z",
-      "html_url": "https://github.com/vishn0o/cat-water-reminder",
-      "homepage": null,
-      "snippet": {
-        "label": "Distribution — File Manifest",
-        "lines": [
-          "cat-reminders.ps1   tray app, reminders, tally",
-          "launch-cat.vbs      silent launcher",
-          "autostart-cat.vbs   45s delayed login start",
-          "install.bat         copy + shortcuts",
-          "uninstall.bat       clean removal",
-          "cat.png / meow.wav  drop-in assets",
-          "cats/ / meows/      random variants"
-        ]
-      }
     }
   ],
   "tech_matrix": {
     "languages": [
-      { "name": "Kotlin", "bytes": 402083, "used_in": ["inkynerd"] },
-      { "name": "Rust", "bytes": 292244, "used_in": ["kathashelf"] },
-      { "name": "JavaScript", "bytes": 149977, "used_in": ["study-hub"] },
-      { "name": "PowerShell", "bytes": 47127, "used_in": ["cat-water-reminder"] },
-      { "name": "CSS", "bytes": 46500, "used_in": ["study-hub"] },
-      { "name": "Python", "bytes": 12546, "used_in": ["inkynerd"] },
-      { "name": "HTML", "bytes": 7172, "used_in": ["study-hub"] },
-      { "name": "Batchfile", "bytes": 2114, "used_in": ["cat-water-reminder"] },
-      { "name": "VBScript", "bytes": 785, "used_in": ["cat-water-reminder"] }
+      {
+        "name": "Kotlin",
+        "bytes": 392849,
+        "used_in": [
+          "inkynerd"
+        ]
+      },
+      {
+        "name": "Rust",
+        "bytes": 292244,
+        "used_in": [
+          "kathashelf"
+        ]
+      },
+      {
+        "name": "JavaScript",
+        "bytes": 150091,
+        "used_in": [
+          "study-hub"
+        ]
+      },
+      {
+        "name": "Python",
+        "bytes": 72248,
+        "used_in": [
+          "cat-water-reminder",
+          "inkynerd"
+        ]
+      },
+      {
+        "name": "PowerShell",
+        "bytes": 47127,
+        "used_in": [
+          "cat-water-reminder"
+        ]
+      },
+      {
+        "name": "CSS",
+        "bytes": 46109,
+        "used_in": [
+          "study-hub"
+        ]
+      },
+      {
+        "name": "HTML",
+        "bytes": 11713,
+        "used_in": [
+          "study-hub"
+        ]
+      },
+      {
+        "name": "Shell",
+        "bytes": 5819,
+        "used_in": [
+          "cat-water-reminder"
+        ]
+      },
+      {
+        "name": "Batchfile",
+        "bytes": 2114,
+        "used_in": [
+          "cat-water-reminder"
+        ]
+      },
+      {
+        "name": "VBScript",
+        "bytes": 785,
+        "used_in": [
+          "cat-water-reminder"
+        ]
+      }
     ]
   },
   "contact": {
     "email": "sureshvishnupv@protonmail.com",
-    "github": "https://github.com/vishn0o"
+    "github": "https://github.com/vishn0o",
+    "repositories": "https://github.com/vishn0o?tab=repositories"
   }
 }
   </script>
