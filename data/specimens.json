@@ -1,9 +1,9 @@
 {
   "_source": {
     "account": "https://github.com/vishn0o",
-    "synced_at": "2026-11-27T20:57:23.901Z",
+    "synced_at": "2026-11-28T07:15:28.167Z",
     "sync_mode": "GITHUB_ACTIONS // MERGED WITH OVERRIDES.JSON",
-    "head_commit": "53285d5",
+    "head_commit": "8a3e3a0",
     "note": "Automatically synced via GitHub Actions and enriched with data/overrides.json."
   },
   "profile": {
@@ -13,7 +13,7 @@
     "location": "Manipal / Kerala, IN",
     "avatar_url": "./profile.jpg",
     "github_avatar_url": "https://avatars.githubusercontent.com/u/115354932?v=4",
-    "public_repos": 4,
+    "public_repos": 5,
     "html_url": "https://github.com/vishn0o",
     "member_since": 2022,
     "discipline": "Local-first software engineering",
@@ -26,6 +26,55 @@
     "email": "sureshvishnupv@protonmail.com"
   },
   "featured_projects": [
+    {
+      "id": "anti-slop-web-craft",
+      "name": "anti-slop-web-craft",
+      "formatted_title": "Anti Slop Web Craft",
+      "type": "Windows Utility",
+      "platform": "WIN32 TRAY",
+      "year": "2026",
+      "footprint": "ZERO-DEPENDENCY SCRIPT",
+      "artifact_type": "code-preview",
+      "description": "Agent skill for bespoke websites: content-first builds and pre-launch audits, no AI slop.",
+      "readme_summary": "A skill for coding agents. It keeps website work honest: find out what the thing actually is before you design it, write words you can stand behind, then ship something that loads fast and works on a phone.",
+      "problem_solved": "Agent skill for bespoke websites: content-first builds and pre-launch audits, no AI slop.",
+      "architecture": "Built with JavaScript, PowerShell, Shell. Stored and executed directly on the user's device.",
+      "key_features": [
+        "Build a site from scratch — ask questions first, write the copy before",
+        "Audit a site before launch — give the owner a prioritized list, fix what",
+        "Claude desktop app: Customize → Skills → + → Create skill → Upload a",
+        "Codex: `$skill-installer install github.com/vishn0o/anti-slop-web-craft`",
+        "Antigravity CLI: `agy plugin install github.com/vishn0o/anti-slop-web-craft`"
+      ],
+      "languages": [
+        "JavaScript",
+        "PowerShell",
+        "Shell"
+      ],
+      "stack": [
+        "JavaScript",
+        "PowerShell",
+        "Shell"
+      ],
+      "latest_commit_sha": "b5957b4",
+      "updated_at": "2026-11-27T22:09:33Z",
+      "html_url": "https://github.com/vishn0o/anti-slop-web-craft",
+      "homepage": null,
+      "snippet": {
+        "label": "REPOSITORY FILE TREE",
+        "lines": [
+          "CHANGELOG.md",
+          "LICENSE",
+          "README.md",
+          "SKILL.md",
+          "scripts/agents/install-antigravity.ps1",
+          "scripts/agents/install-antigravity.sh",
+          "scripts/agents/install-claude-code.ps1",
+          "scripts/agents/install-claude-code.sh",
+          "scripts/agents/install-codex.ps1"
+        ]
+      }
+    },
     {
       "id": "cat-water-reminder",
       "name": "cat-water-reminder",
@@ -208,7 +257,7 @@
         "Service Workers",
         "PWA"
       ],
-      "latest_commit_sha": "b8d692a",
+      "latest_commit_sha": "c30d326",
       "updated_at": "2026-11-19T03:35:12Z",
       "html_url": "https://github.com/vishn0o/study-hub",
       "homepage": "https://vishn0o.github.io/study-hub/",
@@ -245,8 +294,9 @@
       },
       {
         "name": "JavaScript",
-        "bytes": 150091,
+        "bytes": 164403,
         "used_in": [
+          "anti-slop-web-craft",
           "study-hub"
         ]
       },
@@ -259,30 +309,32 @@
         ]
       },
       {
-        "name": "PowerShell",
-        "bytes": 47127,
-        "used_in": [
-          "cat-water-reminder"
-        ]
-      },
-      {
         "name": "CSS",
-        "bytes": 46109,
+        "bytes": 49003,
         "used_in": [
           "study-hub"
         ]
       },
       {
+        "name": "PowerShell",
+        "bytes": 48505,
+        "used_in": [
+          "anti-slop-web-craft",
+          "cat-water-reminder"
+        ]
+      },
+      {
         "name": "HTML",
-        "bytes": 11713,
+        "bytes": 11878,
         "used_in": [
           "study-hub"
         ]
       },
       {
         "name": "Shell",
-        "bytes": 5819,
+        "bytes": 6693,
         "used_in": [
+          "anti-slop-web-craft",
           "cat-water-reminder"
         ]
       },
